@@ -1,0 +1,16 @@
+{
+  "PORT": {
+    "value": "8222",
+    "description": "Monitor/HTTP port. Railway maps the public domain to this port (health check + status endpoints)."
+  },
+  "NATS_LOGGING": {
+    "value": "info",
+    "description": "NATS log level. Options: debug, trace, info, error. (debug/trace are also fixed off in the server config.)",
+    "isOptional": true
+  },
+  "TZ": {
+    "value": "UTC",
+    "description": "Timezone for log timestamps (e.g. America/New_York).",
+    "isOptional": true
+  }
+}

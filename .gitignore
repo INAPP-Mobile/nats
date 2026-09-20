@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+.venv/
+venv/
+__pycache__/
+
+# Build artifacts
+dist/
+build/
+*.pyc
+
+# Secrets / local env
+.env
+*.secret
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Local data
+data/
+*.log
