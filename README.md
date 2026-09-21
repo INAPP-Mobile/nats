@@ -36,13 +36,21 @@ The deploy form pre-fills all required variables. No companion services needed �
 2. Connect clients on NATS clients via the private domain: port `4222`.
 3. Durable state (streams, consumers, messages) persists on the `/data` volume.
 
-## Ports & Health
+## About Hosting
+
+NATS runs as a single container on Railway with a volume mount at `/data`. JetStream state — streams, consumers, and messages — is file-backed under `/data/jetstream` and survives restarts and redeploys. The server starts as root (the base image default) so the root-owned volume is writable.
+
+### Ports & Health
 
 | Port | Purpose | Reach |
 |------|---------|-------|
 | `4222` | NATS client protocol | private domain |
 | `8222` | Monitor / HTTP API (health) | public domain (health = `GET /` returns `200`) |
 | `6222` | Cluster (reserved) | private (reserved for future multi-node) |
+
+## Dependencies for
+
+This template deploys a single NATS container with a Railway volume for JetStream persistence. No additional services are required.
 
 ## Configuration
 
