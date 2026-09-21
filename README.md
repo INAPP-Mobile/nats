@@ -6,7 +6,7 @@ Deploy [NATS Server](https://github.com/nats-io/nats-server) (18k+ stars) — a 
 
 Host your own NATS messaging server on Railway. This template provisions the NATS server with JetStream enabled and a persistent volume for durable streams, consumers, and stored messages.
 
-[![Deploy to Railway](https://railway.app/button.svg)](https://railway.com/deploy/placeholder-template-code)
+[![Deploy to Railway](https://railway.app/button.svg)](https://railway.com/deploy/nats-1)
 
 ## Why Deploy
 
